@@ -1,6 +1,5 @@
-import type { Config } from 'jest';
-
-const config: Config = {
+/** @type {import('jest').Config} */
+module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
   transform: {
@@ -9,5 +8,3 @@ const config: Config = {
   moduleNameMapper: { '\\.(css)$': '<rootDir>/src/test/styleStub.ts' },
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/main.tsx', '!src/test/**', '!src/**/*.d.ts'],
 };
-
-export default config;
